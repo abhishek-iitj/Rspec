@@ -9,5 +9,9 @@ module Calculator
     def add
       x + y
     end
+
+    def subtract
+      x - y
+    end
   end
 end

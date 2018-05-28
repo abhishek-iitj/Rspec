@@ -8,7 +8,7 @@ RSpec.describe Calculator do
     expect(calculator.add).to eql(3)
   end
 
-  it 'adds two numbers for another edge case' do
+  it 'adds two numbers:edge case' do
     calculator = Calculator::Calculator.new(3, 4)
     expect(calculator.add).to_not eql(-7)
   end
@@ -23,5 +23,18 @@ RSpec.describe Calculator do
   it 'checks identity property of add' do
     calculator1 = Calculator::Calculator.new(0, 1)
     expect(calculator1.add).to eql(1)
+  end
+
+  it 'subtracts two numbers' do
+    calculator1 = Calculator::Calculator.new(3, 2)
+    expect(calculator1.subtract).to eql(1)
+  end
+  it 'subtracts two numbers:edge case' do
+    calculator1 = Calculator::Calculator.new(1, 0)
+    expect(calculator1.subtract).to_not eql(0)
+  end
+  it 'checks identity property of subtraction' do
+    calculator1 = Calculator::Calculator.new(0, 1)
+    expect(calculator1.subtract).to eql(-1)
   end
 end
