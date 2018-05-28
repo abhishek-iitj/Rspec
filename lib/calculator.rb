@@ -1,5 +1,2 @@
-require "calculator/version"
-
-module Calculator
-  # Your code goes here...
-end
+require 'calculator/version'
+require 'calculator/calculator'
